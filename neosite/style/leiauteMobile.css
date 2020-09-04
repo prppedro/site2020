@@ -1,0 +1,386 @@
+@charset: utf-8; 
+
+@font-face
+{
+	font-family: "ocr_a"; 
+	src: url("OCRAStd.otf") format("opentype");
+}
+
+/* Tablets e coisas endemoniadas com dpis exagerados */
+/* É base para qualquer layout móvel */
+@media only screen and (max-width: 900px)
+{
+	/* Regras gerais */
+	body
+	{
+		margin: 0; 
+	}
+	
+	.bandeja
+	{
+		width: auto; 
+		margin: 0 auto; 
+		overflow: auto; 
+		clear: both; 
+	}
+	
+	.desktop
+	{
+		display: none; 
+	}
+	
+	/* Regras gerais: texto */
+	.bandeja
+	{
+		font-family: "Georgia", "Times New Roman", times, serif; 
+	}
+	
+	/* === <Topo> === */
+	.bandeja .cab
+	{
+		margin: 0;
+		/*background-color: #9d9; */
+		display: flex; 
+		flex-direction: row; 
+		justify-content: center; 
+	}
+
+	.bandeja .cab .linksExternosMobile
+	{
+		height: auto; 
+		width: 100%; 
+	}
+	
+	.bandeja .cab ul.menuTopo
+	{
+		list-style: none;  
+		display: flex; 
+		padding: 0; 
+		margin: 0;
+		width: 100%; 
+	}
+	.bandeja .cab ul.menuTopo li
+	{
+		padding: 14px; 
+		border-left: 1px solid #ddd; 
+		border-bottom: 2px solid #585; 
+	}
+
+	.bandeja .cab ul.menuTopo li.espacador
+	{
+		flex:1 1 auto; 
+	}
+	
+	.bandeja .cab ul.menuTopo li.link:hover
+	{
+		border-left: 1px solid #eee; 
+		background-color: #fcfcfc; 
+		border-bottom: 2px solid #5a5; 
+	}
+	
+	.bandeja .cab ul.menuTopo li.logo
+	{
+		border-left: none;
+		max-width: 120px;
+	}
+	
+	.bandeja .cab ul.menuTopo li.logo:hover
+	{
+		border-left: none;
+	}
+	
+	.bandeja .cab ul.menuTopo li.logo a img
+	{
+		/* Este é o famoso elemento rebelde */
+		height: 1.2em; 
+	}
+	
+	.bandeja .cab ul.menuTopo li a
+	{
+		font: 10pt ocr_a; 
+		color: #222; 
+		text-decoration: none; 
+	
+		padding: 0.2em 0; 
+
+		-ms-flex-align:center;
+	    -ms-flex-pack:center;
+	    -webkit-align-items:center;
+	    -webkit-box-align:center;
+	    -webkit-box-pack:center;
+	    -webkit-justify-content:center;
+	    align-items:center;
+	    display:-ms-flexbox;
+	    display:-webkit-box;
+	    display:-webkit-flex;
+    	display:flex; 
+	}
+	
+	.bandeja .cab ul.menuTopo li a:hover
+	{
+	
+	}
+	
+	/* === </Topo> === */
+	
+	/* === <Meio> === */
+	.bandeja .flexbox
+	{
+		display: flex; 
+		flex-direction: row; 
+	}
+	
+	.bandeja .flexbox .coluna
+	{
+		flex-basis: 70%; 
+	
+		padding: 2em;
+	}
+	
+	.bandeja .flexbox .lateral
+	{ 
+		flex-basis: 30%; 
+	}
+	
+	.bandeja .flexbox .lateral img.dp
+	{
+		width: 180px;
+	}
+	
+	.bandeja .flexbox .lateral span.bio
+	{
+		font: 10pt ocr_a; 
+	}
+	
+	.bandeja .flexbox .lateral h3
+	{
+		font-family: ocr_a; 	
+	}
+	
+	.bandeja .flexbox .lateral ul
+	{
+		font-family: ocr_a; 
+	
+		list-style: none
+	}
+	
+	.bandeja .flexbox .lateral ul li a
+	{
+		text-decoration: none; 
+		color: #585;
+	}
+	
+	.bandeja .flexbox .lateral ul li a:hover
+	{
+		text-decoration: underline; 
+		color: #5a5;
+	}
+	
+	.bandeja .flexbox .lateral hr
+	{
+		border: 1px dotted #ddd;
+	}
+	
+	.bandeja .con
+	{
+	
+	}
+	
+	.bandeja .con h2
+	{
+		font-family: Helvetica, Verdana; 
+	}
+	
+	.bandeja .con span.data
+	{
+		font: 9pt ocr_a; 
+	}
+	
+	.bandeja .flexbox .coluna 
+	{
+	
+	}
+	/* === </Meio> === */
+	
+	/* === <GrandeArea> === */
+	.bandeja .rod
+	{
+		border-top: 1px solid #ddd;
+		line-height: 1.5em; 
+		padding: 2em;
+		text-align: center; 
+		color: #bbb;
+		font: 10pt Helvetica, Verdana; 
+	}
+	/* === </GrandeArea> === */
+
+
+
+	/* Layout alternativo (leiaute2.html) */
+	.bandeja .meioDeCampo
+	{
+		margin-top: 4em;
+	}
+
+	.bandeja .meioDeCampo .moi
+	{
+		display: flex; 
+		flex-direction: row; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi img.dp
+	{
+		margin: 0 0.3em 0 0.2em; 
+		width: 75px; 
+		height: 76px; 
+
+	}
+
+	.bandeja .meioDeCampo .moi div.bio
+	{
+		padding-left: 0.5em; 
+		flex-basis: 70%; 
+		flex-grow: 1; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre
+	{
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+		flex-wrap: wrap; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome h4
+	{
+		margin: 0 1em 0 0;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome span.aka
+	{
+		font-size: 8pt; 
+		float: right; 
+		margin-right: 1em; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .profis
+	{
+		color: #777;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme
+	{
+		margin-top: 1em;
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+
+		flex-wrap: wrap;
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div
+	{
+		flex-grow: 1; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .titulo
+	{
+		display: block; 
+		margin-bottom: 1em;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .anos
+	{
+		font-size: 8pt; 
+		color: #777;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .anosAtual
+	{
+		font-size: 8pt; 
+		font-weight: bold; 
+		color: #7B7;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .hab
+	{
+		margin-top: 1em;
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .hab .habie
+	{
+		color: #555; 
+		font-style: italic; 
+	}
+}
+
+
+/* Para telas ridiculamente pequenas */
+@media only screen and (max-width: 640px)
+{
+	.bandeja .flexbox .coluna
+	{
+		background-color: teal; 
+		flex-basis: 100%; 
+	}
+	
+	.bandeja .flexbox .lateral
+	{
+		display: none; 
+	}
+
+	.bandeja .cab .linksExternosMobile
+	{
+		display: none; 
+	}
+
+	.bandeja .cab .linksExternosMobileExtreme
+	{
+		width: 100%; 
+		display: block !important; 
+		position: fixed; 
+		background-color: #FFF; 
+	}
+
+	.bandeja .meioDeCampo .moi img.dp
+	{
+		display: none; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre
+	{
+		display: flex; 
+		flex-wrap: nowrap; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre img.dp-mob
+	{
+		margin: 0 0.5em 0 0;
+		display: inline-flex !important; 
+		width: 50px; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .mobilete
+	{
+		flex-wrap: wrap; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome
+	{
+		flex-grow: 1; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome h4
+	{
+		font-size: 9pt; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div
+	{
+		flex-grow: 0; 
+		margin-bottom: 1em; 
+	}
+}

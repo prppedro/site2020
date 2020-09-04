@@ -1,0 +1,346 @@
+@charset: utf-8; 
+
+@font-face
+{
+	font-family: "ocr_a"; 
+	src: url("../font/OCRAStd.otf") format("opentype");
+}
+
+/* O famigerado "mobile firtst" determina que excluamos o
+   carregamento dos itens desktop, para que o site renderi-
+   ze mais rápido em certos locais... Eu tenho uma particu-
+   lar aversão a desenvolver para celular, mas que remédio... */
+/* As configurações mobile, em si, estão num arquivo à parte 
+*/
+@media only screen and (min-width: 901px)
+{
+	/* Regras gerais */
+	body
+	{
+		margin: 0; 
+		background-color: #fafafa; 
+	}
+	
+	/* Tudo que é mobile não aparecerá 
+	*/
+	.mobile
+	{
+		display: none; 
+	}
+	
+	.bandeja
+	{
+		width: 900px; 
+		margin: 0 auto; 
+		overflow: auto; 
+		clear: both; 
+	}
+	/* Regras gerais: texto */
+	.bandeja
+	{
+		font-family: "Georgia", "Times New Roman", times, serif; 
+		background-color: #fafafa; 
+	}
+	
+	/* === <Topo> === */
+	.bandeja .cab
+	{
+		margin: 0;
+		/*background-color: #9d9; */
+		display: flex; 
+		flex-direction: row-reverse; 
+		background-color: #fafafa; 
+		position: fixed; 
+		width: 900px
+	}
+
+	.bandeja .cab .linksExternos
+	{
+		height: auto; 
+		width: 100%; 
+	}
+	
+	.bandeja .cab ul.menuTopo
+	{
+		list-style: none;  
+		display: flex; 
+		padding: 0; 
+		margin: 0;
+	}
+	.bandeja .cab ul.menuTopo li
+	{
+		padding: 14px; 
+		border-left: 1px solid #ddd; 
+		border-bottom: 2px solid #585; 
+	}
+
+	.bandeja .cab ul.menuTopo li.espacador
+	{
+		flex:1 1 auto; 
+	}
+	
+	.bandeja .cab ul.menuTopo li.link:hover
+	{
+		border-left: 1px solid #eee; 
+		background-color: #fcfcfc; 
+		border-bottom: 2px solid #5a5; 
+	}
+	
+	.bandeja .cab ul.menuTopo li.logo
+	{
+		border-left: none;
+	}
+	
+	.bandeja .cab ul.menuTopo li.logo:hover
+	{
+		border-left: none;
+	}
+	
+	.bandeja .cab ul.menuTopo li.logo a img
+	{
+		/* Este é o famoso elemento rebelde */
+		height: 1.2em; 
+	}
+	
+	.bandeja .cab ul.menuTopo li a
+	{
+		font: 10pt ocr_a; 
+		color: #222; 
+		text-decoration: none; 
+	
+		padding: 14px 0; 
+	}
+	
+	.bandeja .cab ul.menuTopo li a:hover
+	{
+	
+	}
+	
+	/* === </Topo> === */
+	
+	/* === <Meio> === */
+	.bandeja .flexbox
+	{
+		margin-top: 3em;
+		padding: 0.5em;
+		display: flex; 
+		flex-direction: row; 
+	}
+	
+	.bandeja .flexbox .coluna
+	{
+		flex-basis: 70%; 
+	
+		padding: 2em;
+	}
+	
+	.bandeja .flexbox .lateral
+	{
+		flex-basis: 30%; 
+	}
+	
+	.bandeja .flexbox .lateral img.dp
+	{
+		width: 180px;
+	}
+	
+	.bandeja .flexbox .lateral span.bio
+	{
+		font: 10pt ocr_a; 
+	}
+	
+	.bandeja .flexbox .lateral h3
+	{
+		font-family: ocr_a; 	
+	}
+	
+	.bandeja .flexbox .lateral ul
+	{
+		font-family: ocr_a; 
+	
+		list-style: none
+	}
+	
+	.bandeja .flexbox .lateral ul li a
+	{
+		text-decoration: none; 
+		color: #585;
+	}
+	
+	.bandeja .flexbox .lateral ul li a:hover
+	{
+		text-decoration: underline; 
+		color: #5a5;
+	}
+	
+	.bandeja .flexbox .lateral hr
+	{
+		border: 1px dotted #ddd;
+	}
+	
+	.bandeja .con
+	{
+	
+	}
+	
+	.bandeja .con h2
+	{
+		font-family: Helvetica, Verdana; 
+	}
+	
+	.bandeja .con span.data
+	{
+		font: 9pt ocr_a; 
+	}
+	
+	.bandeja .flexbox .coluna 
+	{
+	
+	}
+	/* === </Meio> === */
+	
+	/* === <GrandeArea> === */
+	.bandeja .rod
+	{
+		border-top: 1px solid #ddd;
+		line-height: 1.5em; 
+		padding: 2em;
+		text-align: center; 
+		color: #bbb;
+		font: 10pt Helvetica, Verdana; 
+	}
+	/* === </GrandeArea> === */
+
+
+	/* Layout alternativo (leiaute2.html) */
+	.bandeja .meioDeCampo
+	{
+		margin-top: 4em;
+	}
+
+	.bandeja .meioDeCampo .moi
+	{
+		display: flex; 
+		flex-direction: row; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi img.dp
+	{
+		margin: 0 0.3em 0 0.2em; 
+		width: 140px; 
+
+	}
+
+	.bandeja .meioDeCampo .moi div.bio
+	{
+		padding-left: 0.5em; 
+		flex-basis: 70%; 
+		flex-grow: 1; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre
+	{
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome h4
+	{
+		margin: 0 1em 0 0;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome span.aka
+	{
+		font-size: 8pt; 
+		float: right; 
+		margin-right: 1em; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .profis
+	{
+		color: #777;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme
+	{
+		margin-top: 1em;
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div
+	{
+		width: 50%; 
+		flex-basis: 50%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .titulo
+	{
+		display: block; 
+		margin-bottom: 1em;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .anos
+	{
+		font-size: 8pt; 
+		color: #777;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .anosAtual
+	{
+		font-size: 8pt; 
+		font-weight: bold; 
+		color: #7B7;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .hab
+	{
+		margin-top: 1em;
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .hab .habie
+	{
+		color: #555; 
+		font-style: italic; 
+	}
+
+
+
+
+	.bandeja .meioDeCampo .secoes
+	{
+		margin-top: 1em;
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: space-around;
+
+		font: 10pt ocr_a;
+
+
+	}
+
+	.bandeja .meioDeCampo .secoes .col
+	{
+		flex-basis: 25%; 
+		flex-grow: 1;
+
+		padding: 0.6em; 
+		margin: 0.4em; 
+		color: #333;
+	}
+
+	.bandeja .meioDeCampo .secoes .green
+	{
+		border-bottom: 2px solid #595; 
+	}
+
+	.bandeja .meioDeCampo .secoes .orange
+	{
+		border-bottom: 2px solid #955; 
+	}
+}
