@@ -211,8 +211,7 @@
 	}
 	/* === </GrandeArea> === */
 
-
-	/* Layout alternativo (leiaute2.html) */
+		/* Layout alternativo (leiaute2.html) */
 	.bandeja .meioDeCampo
 	{
 		margin-top: 4em;
@@ -312,35 +311,38 @@
 
 
 
-	.bandeja .meioDeCampo .secoes
-	{
-		margin-top: 1em;
-		display: flex; 
-		flex-wrap: wrap; 
-		justify-content: space-around;
-
-		font: 10pt ocr_a;
+}
 
 
-	}
+/* Este trecho tem de ser universal entre mobile e desktop */
+.bandeja .meioDeCampo .secoes
+{
+	margin-top: 1em;
+	display: flex; 
+	flex-wrap: wrap; 
+	justify-content: space-around;
 
-	.bandeja .meioDeCampo .secoes .col
-	{
-		flex-basis: 25%; 
-		flex-grow: 1;
+	font: 10pt ocr_a;
+}
 
-		padding: 0.6em; 
-		margin: 0.4em; 
-		color: #333;
-	}
+.bandeja .meioDeCampo .secoes .col
+{
+	min-width: 240px; 
 
-	.bandeja .meioDeCampo .secoes .green
-	{
-		border-bottom: 2px solid #595; 
-	}
+	flex-basis: 25%; 
+	flex-grow: 1;
 
-	.bandeja .meioDeCampo .secoes .orange
-	{
-		border-bottom: 2px solid #955; 
-	}
+	padding: 0.6em; 
+	margin: 0.4em; 
+	color: #333;
+}
+
+.bandeja .meioDeCampo .secoes .green
+{
+	border-bottom: 2px solid #595; 
+}
+
+.bandeja .meioDeCampo .secoes .orange
+{
+	border-bottom: 2px solid #955; 
 }

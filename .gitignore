@@ -1,0 +1,9 @@
+*
+!.gitignore
+!README.md
+!index.html
+!neosite
+!neosite/img/*
+!neosite/style/*
+!neosite/font/*
+!neosite/*

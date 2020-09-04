@@ -383,4 +383,136 @@
 		flex-grow: 0; 
 		margin-bottom: 1em; 
 	}
+
+		/* Layout alternativo (leiaute2.html) */
+	.bandeja .meioDeCampo
+	{
+		margin-top: 4em;
+	}
+
+	.bandeja .meioDeCampo .moi
+	{
+		display: flex; 
+		flex-direction: row; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi img.dp
+	{
+		margin: 0 0.3em 0 0.2em; 
+		width: 140px; 
+
+	}
+
+	.bandeja .meioDeCampo .moi div.bio
+	{
+		padding-left: 0.5em; 
+		flex-basis: 70%; 
+		flex-grow: 1; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre
+	{
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome h4
+	{
+		margin: 0 1em 0 0;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .nome span.aka
+	{
+		font-size: 8pt; 
+		float: right; 
+		margin-right: 1em; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .sobre .profis
+	{
+		color: #777;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme
+	{
+		margin-top: 1em;
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div
+	{
+		width: 50%; 
+		flex-basis: 50%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .titulo
+	{
+		display: block; 
+		margin-bottom: 1em;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .anos
+	{
+		font-size: 8pt; 
+		color: #777;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .forme div .anosAtual
+	{
+		font-size: 8pt; 
+		font-weight: bold; 
+		color: #7B7;
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .hab
+	{
+		margin-top: 1em;
+		font: 10pt ocr_a, "Courier New", mono; 
+		display: flex; 
+		width: 100%; 
+	}
+
+	.bandeja .meioDeCampo .moi div.bio .hab .habie
+	{
+		color: #555; 
+		font-style: italic; 
+	}
+
+
+
+
+	.bandeja .meioDeCampo .secoes
+	{
+		margin-top: 1em;
+		display: flex; 
+		flex-wrap: wrap; 
+		justify-content: space-around;
+
+		font: 10pt ocr_a;
+
+
+	}
+
+	.bandeja .meioDeCampo .secoes .col
+	{
+		flex-basis: 25%; 
+		flex-grow: 1;
+
+		padding: 0.6em; 
+		margin: 0.4em; 
+		color: #333;
+	}
+
+	.bandeja .meioDeCampo .secoes .green
+	{
+		border-bottom: 2px solid #595; 
+	}
+
+	.bandeja .meioDeCampo .secoes .orange
+	{
+		border-bottom: 2px solid #955; 
+	}
 }
