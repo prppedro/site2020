@@ -6,6 +6,34 @@
 	src: url("../font/OCRAStd.otf") format("opentype");
 }
 
+@font-face 
+{
+	font-family: "Tex Gyre Adventor"; 
+	src: url("../font/TeXGyreAdventor-Italic-subset.ttf"); 
+	font-style: italic, oblique; 
+}	
+
+@font-face 
+{
+	font-family: "Tex Gyre Adventor"; 
+	src: url("../font/TeXGyreAdventor-BoldItalic-subset.ttf"); 
+	font-weight: bold; 	
+	font-style: italic, oblique; 
+}	
+
+@font-face 
+{
+	font-family: "Tex Gyre Adventor"; 
+	src: url("../font/TeXGyreAdventor-Regular-subset.ttf"); 
+}
+
+@font-face 
+{
+	font-family: "Tex Gyre Adventor"; 
+	src: url("../font/TeXGyreAdventor-Bold-subset.ttf"); 
+	font-weight: bold; 
+}
+
 /* O famigerado "mobile firtst" determina que excluamos o
    carregamento dos itens desktop, para que o site renderi-
    ze mais rápido em certos locais... Eu tenho uma particu-
@@ -313,6 +341,11 @@
 
 }
 
+a
+{
+	text-decoration: none; 
+        color: #5B5; 	
+}
 
 /* Este trecho tem de ser universal entre mobile e desktop */
 .bandeja .meioDeCampo .secoes
@@ -322,7 +355,7 @@
 	flex-wrap: wrap; 
 	justify-content: space-around;
 
-	font: 10pt ocr_a;
+	font: 10pt "TeX Gyre Adventor", "Trebuchet MS";
 }
 
 .bandeja .meioDeCampo .secoes .col
@@ -332,9 +365,15 @@
 	flex-basis: 25%; 
 	flex-grow: 1;
 
+	color: #333;
+}
+
+.bandeja .meioDeCampo .secoes .col .titulo
+{
 	padding: 0.6em; 
 	margin: 0.4em; 
-	color: #333;
+
+	font: 11pt ocr_a; 
 }
 
 .bandeja .meioDeCampo .secoes .green
@@ -345,4 +384,11 @@
 .bandeja .meioDeCampo .secoes .orange
 {
 	border-bottom: 2px solid #955; 
+}
+
+.bandeja .meioDeCampo .secoes .col .cont
+{
+	padding: 0.4em; 
+	margin: 0.4em;
+	line-height: 1.7em; 	
 }
