@@ -66,7 +66,7 @@
 	/* Regras gerais: texto */
 	.bandeja
 	{
-		font-family: "Georgia", "Times New Roman", times, serif; 
+		font-family: "TeX Gyre Adventor", "Trebuchet MS", sans-serif; 
 		background-color: #fafafa; 
 	}
 	
@@ -338,13 +338,33 @@
 
 
 
-
 }
 
+/* Mais coisas fora do media... Acho que preciso retificar isso, depois */
 a
 {
 	text-decoration: none; 
         color: #5B5; 	
+}
+
+.bandeja .meioDeCampo .moi div.bio .hab
+{
+	display: flex; 
+        flex-wrap: wrap; 
+}
+
+.bandeja .meioDeCampo .moi div.bio .habie
+{
+	margin-right: 0.5em; 
+	flex-grow: 1; 
+}
+
+.bandeja .meioDeCampo .moi div.bio .desc
+{
+	padding: 0.5em 0; 
+	font-size: 10pt; 
+        line-height: 1.5em; 	
+	color: #555; 
 }
 
 /* Este trecho tem de ser universal entre mobile e desktop */
